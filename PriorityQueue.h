@@ -1,3 +1,5 @@
+#pragma once
+
 template <class T>
 class PriorityQueue {
 
@@ -8,7 +10,7 @@ class PriorityQueue {
         PriorityQueue(const PriorityQueue<T> & arr);
         PriorityQueue & operator = (const PriorityQueue<T> & rhs);
 
-        virtual void enQueue(T, int);
+        virtual void enQueue(T, int = 0);
         virtual T deQueue();
         virtual void print();
         virtual bool isEmpty() const;
@@ -25,7 +27,7 @@ template <class T>
 PriorityQueue<T>::PriorityQueue(const PriorityQueue<T> & arr){}
 
 template <class T>
-T PriorityQueue<T>::deQueue(){}
+T PriorityQueue<T>::deQueue(){ throw "what"; }
 
 template <class T>
 void PriorityQueue<T>::enQueue(T item, int priority){}

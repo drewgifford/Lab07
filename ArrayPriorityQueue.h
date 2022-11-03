@@ -16,7 +16,7 @@ class ArrayPriorityQueue : public PriorityQueue<T> {
 
         ~ArrayPriorityQueue();
 
-        void enQueue(T, int);
+        void enQueue(T, int = 0);
         T deQueue();
         void print();
         bool isEmpty() const;
@@ -29,7 +29,7 @@ class ArrayPriorityQueue : public PriorityQueue<T> {
 };
 
 template <class T>
-ArrayPriorityQueue<T>::ArrayPriorityQueue() : m_maxSize(100){
+ArrayPriorityQueue<T>::ArrayPriorityQueue() : m_maxSize(10000){
     //TODO: Constructor
     m_values = new PriorityNode<T>[m_maxSize];
 }

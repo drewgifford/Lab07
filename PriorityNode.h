@@ -1,3 +1,5 @@
+#pragma once
+
 template <class T>
 class PriorityNode {
 
@@ -6,6 +8,12 @@ class PriorityNode {
         PriorityNode(T, int);
         int priority;
         T value;
+
+        bool operator== (const PriorityNode& rhs){return priority == rhs.priority;};
+        bool operator< (const PriorityNode& rhs){return priority < rhs.priority;};
+        bool operator> (const PriorityNode& rhs){return  priority > rhs.priority;};
+        bool operator<= (const PriorityNode& rhs){return !operator> (rhs);};
+        bool operator>= (const PriorityNode& rhs){return !operator< (rhs);};
 
 };
 template <class T>
